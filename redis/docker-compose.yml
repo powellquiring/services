@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  bench:
+    image: redis:3.0
+    entrypoint:
+      - redis-benchmark
+      - -h
+      - redis
+      - -q
+      - -n
+      - "100000"
+  redis:
+    image: redis:3.0
